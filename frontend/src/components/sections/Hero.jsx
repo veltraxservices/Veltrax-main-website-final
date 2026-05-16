@@ -30,7 +30,7 @@ const Hero = () => {
 
   const scrollWork = (e) => {
     e.preventDefault();
-    document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("services")?.scrollIntoView({ behavior: "smooth" });
   };
 
   // Reveal animation for headline lines
@@ -54,7 +54,7 @@ const Hero = () => {
       ref={sectionRef}
       id="home"
       data-testid="hero-section"
-      className="relative min-h-screen w-full overflow-hidden flex items-end pb-16 sm:pb-24"
+      className="relative min-h-screen w-full overflow-hidden flex flex-col justify-end pt-28 sm:pt-32 pb-16 sm:pb-24"
     >
       {/* Parallax background image */}
       <motion.div
@@ -93,7 +93,7 @@ const Hero = () => {
           <span className="vx-overline text-white/70">{t("hero.eyebrow")}</span>
         </motion.div>
 
-        <h1 className="font-display text-white font-light tracking-[-0.04em] leading-[0.92] text-[14vw] sm:text-[12vw] md:text-[10vw] lg:text-[8.5vw] xl:text-[8vw] uppercase max-w-[1400px]">
+        <h1 className="font-display text-white font-light tracking-[-0.04em] leading-[0.92] text-[13vw] sm:text-[11vw] md:text-[9vw] lg:text-[7.5vw] xl:text-[6.8vw] uppercase max-w-[1400px]">
           {lines.map((key, i) => (
             <span key={key} className="block overflow-hidden">
               <motion.span

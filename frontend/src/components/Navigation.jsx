@@ -33,7 +33,7 @@ const Navigation = () => {
   const links = [
     { id: "services", label: t("nav.services") },
     { id: "process", label: t("nav.process") },
-    { id: "work", label: t("nav.work") },
+    { id: "approach", label: t("nav.work") },
     { id: "contact", label: t("nav.contact") },
   ];
 
@@ -50,9 +50,16 @@ const Navigation = () => {
         <Link
           to="/"
           data-testid="nav-logo"
-          className="font-display text-white text-xl tracking-[0.22em] font-medium"
+          className="flex items-center"
+          aria-label="Veltrax"
         >
-          VELSTRAX
+          <img
+            src="/brand/veltrax-logo.png"
+            alt="Veltrax"
+            draggable={false}
+            className="h-16 w-16 sm:h-20 sm:w-20 select-none"
+            style={{ objectFit: "contain" }}
+          />
         </Link>
 
         <nav className="hidden md:flex items-center gap-10">

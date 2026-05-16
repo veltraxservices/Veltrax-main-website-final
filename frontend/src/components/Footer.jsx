@@ -61,9 +61,15 @@ const Footer = () => {
             <Link
               to="/"
               data-testid="footer-logo"
-              className="font-display text-white text-5xl sm:text-7xl lg:text-8xl tracking-[-0.04em] font-light uppercase block"
+              className="inline-flex items-center"
+              aria-label="Veltrax"
             >
-              Velstrax
+              <img
+                src="/brand/veltrax-logo.png"
+                alt="Veltrax"
+                draggable={false}
+                className="w-40 sm:w-52 lg:w-60 h-auto select-none"
+              />
             </Link>
             <p className="mt-6 text-white/55 text-base sm:text-lg font-light max-w-md">
               {t("footer.tagline")}
@@ -73,7 +79,7 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <span className="vx-overline">{t("footer.nav_label")}</span>
             <ul className="mt-5 space-y-3">
-              {["services", "process", "work", "contact"].map((id) => (
+              {["services", "process", "approach", "contact"].map((id) => (
                 <li key={id}>
                   <a
                     href={`#${id}`}
@@ -81,7 +87,7 @@ const Footer = () => {
                     data-testid={`footer-link-${id}`}
                     className="vx-link text-white/70 hover:text-white text-base font-light"
                   >
-                    {t(`nav.${id}`)}
+                    {t(id === "approach" ? "nav.work" : `nav.${id}`)}
                   </a>
                 </li>
               ))}
@@ -134,7 +140,7 @@ const Footer = () => {
 
         <div className="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-white/40 text-xs tracking-widest uppercase font-display">
           <p>
-            © {new Date().getFullYear()} Velstrax. {t("footer.rights")}
+            © {new Date().getFullYear()} Veltrax. {t("footer.rights")}
           </p>
           <Link
             to="/admin/login"

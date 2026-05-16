@@ -8,13 +8,7 @@ const Contact = () => {
   const { t } = useLanguage();
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    company: "",
-    budget: "",
-    message: "",
-  });
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState("");
@@ -30,15 +24,13 @@ const Contact = () => {
     try {
       await api.post("/contact", form);
       setSuccess(true);
-      setForm({ name: "", email: "", company: "", budget: "", message: "" });
+      setForm({ name: "", email: "", message: "" });
     } catch (err) {
       setError(formatApiError(err.response?.data?.detail) || t("contact.error"));
     } finally {
       setSubmitting(false);
     }
   };
-
-  const budgetOpts = t("contact.budget_opts");
 
   return (
     <section
@@ -63,7 +55,7 @@ const Contact = () => {
                 {t("contact.title_em")}
               </span>
             </h2>
-            <p className="mt-8 text-white/60 text-base sm:text-lg font-light max-w-md leading-relaxed">
+            <p className="mt-8 text-white/65 text-base sm:text-lg font-light max-w-md leading-relaxed">
               {t("contact.subtitle")}
             </p>
           </div>
@@ -71,7 +63,7 @@ const Contact = () => {
           <div className="mt-12 grid grid-cols-2 gap-6 sm:gap-10 max-w-md">
             <div>
               <span className="vx-overline">Email</span>
-              <p className="mt-2 text-white text-base font-light">
+              <p className="mt-2 text-white text-base font-light break-all">
                 veltrax.services@gmail.com
               </p>
             </div>
@@ -105,7 +97,7 @@ const Contact = () => {
                 className="vx-link text-white/60 hover:text-white text-sm tracking-widest uppercase"
                 data-testid="contact-new-message"
               >
-                ↩ Send another
+                ↩ {t("contact.submit")}
               </button>
             </div>
           ) : (
@@ -114,72 +106,37 @@ const Contact = () => {
               data-testid="contact-form"
               className="flex flex-col gap-8"
             >
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <div>
-                  <label className="vx-overline block mb-2">{t("contact.name")}</label>
-                  <input
-                    required
-                    type="text"
-                    value={form.name}
-                    onChange={onChange("name")}
-                    data-testid="contact-input-name"
-                    className="vx-input"
-                    placeholder="Maria Papadopoulos"
-                  />
-                </div>
-                <div>
-                  <label className="vx-overline block mb-2">{t("contact.email")}</label>
-                  <input
-                    required
-                    type="email"
-                    value={form.email}
-                    onChange={onChange("email")}
-                    data-testid="contact-input-email"
-                    className="vx-input"
-                    placeholder="hello@example.com"
-                  />
-                </div>
-              </div>
-
               <div>
-                <label className="vx-overline block mb-2">{t("contact.company")}</label>
+                <label className="vx-overline block mb-2">{t("contact.name")}</label>
                 <input
+                  required
                   type="text"
-                  value={form.company}
-                  onChange={onChange("company")}
-                  data-testid="contact-input-company"
+                  value={form.name}
+                  onChange={onChange("name")}
+                  data-testid="contact-input-name"
                   className="vx-input"
                   placeholder="—"
                 />
               </div>
 
               <div>
-                <label className="vx-overline block mb-3">{t("contact.budget")}</label>
-                <div className="flex flex-wrap gap-2 sm:gap-3">
-                  {Array.isArray(budgetOpts) &&
-                    budgetOpts.map((b) => (
-                      <button
-                        key={b}
-                        type="button"
-                        onClick={() => setForm((f) => ({ ...f, budget: b }))}
-                        data-testid={`contact-budget-${b}`}
-                        className={`px-4 py-2 text-xs sm:text-sm tracking-wide font-display border transition-all ${
-                          form.budget === b
-                            ? "bg-white text-black border-white"
-                            : "border-white/20 text-white/70 hover:border-white/60 hover:text-white"
-                        }`}
-                      >
-                        {b}
-                      </button>
-                    ))}
-                </div>
+                <label className="vx-overline block mb-2">{t("contact.email")}</label>
+                <input
+                  required
+                  type="email"
+                  value={form.email}
+                  onChange={onChange("email")}
+                  data-testid="contact-input-email"
+                  className="vx-input"
+                  placeholder="hello@example.com"
+                />
               </div>
 
               <div>
                 <label className="vx-overline block mb-2">{t("contact.message")}</label>
                 <textarea
                   required
-                  rows={4}
+                  rows={5}
                   value={form.message}
                   onChange={onChange("message")}
                   data-testid="contact-input-message"

@@ -147,8 +147,13 @@ const AdminDashboardPage = () => {
       <header className="border-b border-white/10">
         <div className="vx-container py-5 flex items-center justify-between">
           <div className="flex items-center gap-4">
-            <Link to="/" className="font-display text-white text-lg tracking-[0.22em] font-medium" data-testid="admin-logo">
-              VELSTRAX
+            <Link to="/" className="flex items-center" data-testid="admin-logo" aria-label="Veltrax">
+              <img
+                src="/brand/veltrax-logo.png"
+                alt="Veltrax"
+                className="h-12 w-12"
+                style={{ objectFit: "contain" }}
+              />
             </Link>
             <span className="vx-overline text-white/40 hidden sm:inline">/ {t("admin.dashboard")}</span>
           </div>

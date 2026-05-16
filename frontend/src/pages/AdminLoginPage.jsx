@@ -41,7 +41,12 @@ const AdminLoginPage = () => {
           className="inline-flex items-center gap-2 text-white/60 hover:text-white text-xs uppercase tracking-[0.18em] font-display"
         >
           <ArrowLeft size={14} />
-          Velstrax
+          <img
+            src="/brand/veltrax-logo.png"
+            alt="Veltrax"
+            className="h-12 w-12"
+            style={{ objectFit: "contain" }}
+          />
         </Link>
         <span className="vx-overline">Admin</span>
       </div>
@@ -49,7 +54,7 @@ const AdminLoginPage = () => {
       <div className="flex-1 grid grid-cols-1 lg:grid-cols-12">
         <div className="lg:col-span-7 hidden lg:flex relative items-end p-16 border-r border-white/10 overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1527576539890-dfa815648363?crop=entropy&cs=srgb&fm=jpg&w=1400&q=85"
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=85"
             alt=""
             className="absolute inset-0 w-full h-full object-cover vx-grayscale opacity-60"
           />

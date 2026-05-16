@@ -3,20 +3,20 @@ export const translations = {
     nav: {
       services: "Υπηρεσίες",
       process: "Διαδικασία",
-      work: "Έργα",
+      work: "Φιλοσοφία",
       contact: "Επικοινωνία",
       start: "Ξεκινήστε",
     },
     hero: {
       eyebrow: "Premium Web Studio · Ελλάδα",
-      title_l1: "Κτίζουμε premium",
+      title_l1: "Φτιάχνουμε premium",
       title_l2: "ιστοσελίδες που",
       title_l3: "μετατρέπουν",
       title_l4: "επισκέπτες σε πελάτες.",
       subtitle:
-        "Η Velstrax είναι ένα μικρό studio στην Ελλάδα που δημιουργεί ψηφιακές εμπειρίες υψηλής ποιότητας για μικρές επιχειρήσεις που θέλουν να μοιάζουν με τις μεγαλύτερες.",
+        "Η Veltrax είναι ένα νέο studio από την Ελλάδα που δημιουργεί premium ψηφιακές εμπειρίες για μικρές επιχειρήσεις που θέλουν να μοιάζουν με τις μεγαλύτερες.",
       cta_primary: "Ξεκινήστε το Project σας",
-      cta_secondary: "Δείτε τα Έργα μας",
+      cta_secondary: "Δείτε τις Υπηρεσίες",
       scroll: "Κυλήστε",
     },
     metrics: {
@@ -83,6 +83,30 @@ export const translations = {
         },
       ],
     },
+    approach: {
+      eyebrow: "Η Φιλοσοφία μας",
+      title: "Λιγότερος θόρυβος. Περισσότερη ουσία.",
+      subtitle:
+        "Δεν φτιάχνουμε απλά websites — σχεδιάζουμε εμπειρίες που αναβαθμίζουν την εικόνα της επιχείρησής σας και κερδίζουν την εμπιστοσύνη των πελατών από το πρώτο δευτερόλεπτο.",
+      principles: [
+        {
+          t: "Σχεδιασμός με Σκοπό",
+          d: "Κάθε pixel εξυπηρετεί έναν business στόχο — όχι απλά αισθητική.",
+        },
+        {
+          t: "Ταχύτητα Premium",
+          d: "Sub-second loading, smooth animations, μηδενικό jank ακόμη και σε mobile.",
+        },
+        {
+          t: "Conversion First",
+          d: "Δομές και copy που οδηγούν τον επισκέπτη φυσικά στο επόμενο βήμα.",
+        },
+        {
+          t: "Ελληνική Ομάδα",
+          d: "Επικοινωνία στα ελληνικά, κατανόηση της τοπικής αγοράς, support χωρίς fuss.",
+        },
+      ],
+    },
     portfolio: {
       eyebrow: "Έργα",
       title: "Μεταμορφώσεις, όχι απλά websites.",
@@ -93,23 +117,20 @@ export const translations = {
     },
     contact: {
       eyebrow: "Επικοινωνία",
-      title: "Ας κτίσουμε κάτι",
+      title: "Ας φτιάξουμε κάτι",
       title_em: "premium.",
       subtitle:
-        "Πείτε μας λίγα λόγια για το project σας. Θα απαντήσουμε εντός 24 ωρών με τα επόμενα βήματα.",
+        "Πείτε μας λίγα λόγια για το project σας. Θα απαντήσουμε εντός 24 ωρών.",
       name: "Ονοματεπώνυμο",
       email: "Email",
-      company: "Εταιρεία (προαιρετικό)",
-      budget: "Προϋπολογισμός",
-      budget_opts: ["< €3.000", "€3.000 – €8.000", "€8.000 – €20.000", "€20.000+"],
-      message: "Πείτε μας για το project",
-      submit: "Στείλτε το Μήνυμα",
+      message: "Το μήνυμά σας",
+      submit: "Αποστολή",
       sending: "Αποστολή...",
       success: "Ευχαριστούμε! Θα επικοινωνήσουμε σύντομα.",
       error: "Κάτι πήγε στραβά. Δοκιμάστε ξανά.",
     },
     footer: {
-      tagline: "Premium web studio βασισμένο στην Ελλάδα.",
+      tagline: "Premium ψηφιακά συστήματα για τοπικές επιχειρήσεις.",
       rights: "Με επιφύλαξη παντός δικαιώματος.",
       contact_label: "Επικοινωνία",
       social_label: "Κοινωνικά",
@@ -117,7 +138,7 @@ export const translations = {
     },
     admin: {
       login_title: "Είσοδος Διαχείρισης",
-      login_subtitle: "Συνδεθείτε για να επεξεργαστείτε τη Velstrax.",
+      login_subtitle: "Συνδεθείτε για να επεξεργαστείτε τη Veltrax.",
       email: "Email",
       password: "Password",
       sign_in: "Είσοδος",
@@ -158,7 +179,7 @@ export const translations = {
     nav: {
       services: "Services",
       process: "Process",
-      work: "Work",
+      work: "Approach",
       contact: "Contact",
       start: "Start",
     },
@@ -169,9 +190,9 @@ export const translations = {
       title_l3: "turn visitors",
       title_l4: "into customers.",
       subtitle:
-        "Velstrax is a Greece-based studio crafting high-end digital experiences for small businesses that want to look like the biggest.",
+        "Veltrax is a new Greece-based studio crafting high-end digital experiences for small businesses that want to look like the biggest.",
       cta_primary: "Start Your Project",
-      cta_secondary: "View Our Work",
+      cta_secondary: "View Services",
       scroll: "Scroll",
     },
     metrics: {
@@ -238,6 +259,30 @@ export const translations = {
         },
       ],
     },
+    approach: {
+      eyebrow: "Our philosophy",
+      title: "Less noise. More signal.",
+      subtitle:
+        "We don't just ship websites — we engineer experiences that elevate your brand and earn customer trust from the very first second.",
+      principles: [
+        {
+          t: "Design with intent",
+          d: "Every pixel serves a business goal — not aesthetics for their own sake.",
+        },
+        {
+          t: "Premium speed",
+          d: "Sub-second loads, fluid animation, zero jank — even on mobile.",
+        },
+        {
+          t: "Conversion first",
+          d: "Structures and copy that guide visitors naturally to the next step.",
+        },
+        {
+          t: "Greek team",
+          d: "Native communication, deep local-market understanding, no-fuss support.",
+        },
+      ],
+    },
     portfolio: {
       eyebrow: "Work",
       title: "Transformations, not just websites.",
@@ -264,7 +309,7 @@ export const translations = {
       error: "Something went wrong. Try again.",
     },
     footer: {
-      tagline: "Premium web studio based in Greece.",
+      tagline: "Premium digital systems for local businesses.",
       rights: "All rights reserved.",
       contact_label: "Contact",
       social_label: "Social",

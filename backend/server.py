@@ -146,9 +146,7 @@ class PortfolioItem(BaseModel):
 class ContactRequest(BaseModel):
     name: str
     email: EmailStr
-    company: Optional[str] = ""
     message: str
-    budget: Optional[str] = ""
 
 
 # ==========================================
@@ -250,17 +248,15 @@ def _build_contact_email(c: ContactRequest) -> str:
     return f"""
 <table style="width:100%;max-width:600px;margin:0 auto;font-family:Helvetica,Arial,sans-serif;background:#0A0A0A;color:#FFFFFF;padding:32px;border:1px solid rgba(255,255,255,0.1);">
   <tr><td>
-    <h1 style="font-size:28px;font-weight:300;letter-spacing:0.04em;text-transform:uppercase;margin:0 0 8px;color:#FFFFFF;">VELSTRAX</h1>
+    <h1 style="font-size:28px;font-weight:300;letter-spacing:0.04em;text-transform:uppercase;margin:0 0 8px;color:#FFFFFF;">VELTRAX</h1>
     <p style="font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#A1A1AA;margin:0 0 32px;">New Project Inquiry</p>
     <table style="width:100%;border-collapse:collapse;color:#FFFFFF;">
       <tr><td style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.1);"><strong>Name</strong></td><td style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.1);text-align:right;color:#A1A1AA;">{c.name}</td></tr>
       <tr><td style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.1);"><strong>Email</strong></td><td style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.1);text-align:right;color:#A1A1AA;">{c.email}</td></tr>
-      <tr><td style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.1);"><strong>Company</strong></td><td style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.1);text-align:right;color:#A1A1AA;">{c.company or '-'}</td></tr>
-      <tr><td style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.1);"><strong>Budget</strong></td><td style="padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.1);text-align:right;color:#A1A1AA;">{c.budget or '-'}</td></tr>
     </table>
     <p style="font-size:12px;letter-spacing:0.2em;text-transform:uppercase;color:#A1A1AA;margin:32px 0 8px;">Message</p>
-    <p style="font-size:15px;line-height:1.7;color:#FFFFFF;margin:0;">{c.message}</p>
-    <p style="font-size:11px;color:#52525B;margin:48px 0 0;letter-spacing:0.1em;">Sent from velstrax.com contact form</p>
+    <p style="font-size:15px;line-height:1.7;color:#FFFFFF;margin:0;white-space:pre-wrap;">{c.message}</p>
+    <p style="font-size:11px;color:#52525B;margin:48px 0 0;letter-spacing:0.1em;">Sent from veltrax.com contact form</p>
   </td></tr>
 </table>
 """
@@ -280,7 +276,7 @@ async def submit_contact(payload: ContactRequest):
     email_sent = False
     try:
         params = {
-            "from": f"Velstrax <{SENDER_EMAIL}>",
+            "from": f"Veltrax <{SENDER_EMAIL}>",
             "to": [RECIPIENT_EMAIL],
             "subject": f"New Inquiry — {payload.name}",
             "html": _build_contact_email(payload),
@@ -303,7 +299,7 @@ async def list_contacts(user: dict = Depends(get_current_user)):
 
 @api_router.get("/")
 async def root():
-    return {"message": "Velstrax API"}
+    return {"message": "Veltrax API"}
 
 
 # ==========================================
@@ -434,10 +430,10 @@ async def seed_settings():
     if not existing:
         await db.settings.insert_one({
             "key": "global",
-            "youtube": "https://youtube.com/@velstrax",
-            "instagram": "https://instagram.com/velstrax",
-            "tiktok": "https://tiktok.com/@velstrax",
-            "email": "hello@velstrax.com",
+            "youtube": "",
+            "instagram": "",
+            "tiktok": "",
+            "email": "veltrax.services@gmail.com",
             "updated_at": datetime.now(timezone.utc).isoformat(),
         })
 
@@ -448,7 +444,6 @@ async def startup_event():
     await db.portfolio.create_index("id", unique=True)
     await db.settings.create_index("key", unique=True)
     await seed_admin()
-    await seed_portfolio()
     await seed_settings()
 
 
