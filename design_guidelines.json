@@ -1,0 +1,121 @@
+{
+  "project_name": "Velstrax",
+  "theme_and_archetype": {
+    "theme": "dark",
+    "archetype": "Archetype 4 (Swiss & High-Contrast) + Archetype 5 (Jewel & Luxury) - Brutalist Luxury Variant",
+    "description": "Ultra premium, minimal, strictly black & white color palette. Apple-level design quality with cinematic, high-contrast aesthetics. It emphasizes trust, premium quality, and transformation."
+  },
+  "typography": {
+    "font_family_primary": "Cabinet Grotesk",
+    "font_family_secondary": "Satoshi",
+    "hierarchy": {
+      "h1": "text-5xl sm:text-6xl lg:text-7xl font-light tracking-tighter uppercase",
+      "h2": "text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight uppercase",
+      "h3": "text-2xl sm:text-3xl font-medium tracking-tight",
+      "h4": "text-xl font-medium",
+      "body": "text-base sm:text-lg leading-relaxed text-zinc-400 font-secondary",
+      "overline": "text-xs font-semibold tracking-[0.2em] uppercase text-zinc-500"
+    }
+  },
+  "colors": {
+    "background": "#0A0A0A",
+    "surface": "#121212",
+    "surface_glass": "rgba(10, 10, 10, 0.6)",
+    "text_primary": "#FFFFFF",
+    "text_secondary": "#A1A1AA",
+    "border": "rgba(255, 255, 255, 0.1)",
+    "accent": "#FFFFFF",
+    "hover_state": "rgba(255, 255, 255, 0.05)"
+  },
+  "spacing_and_layout": {
+    "section_padding": "py-24 sm:py-32",
+    "container_padding": "px-6 sm:px-12 lg:px-24",
+    "grid_gap": "gap-8 sm:gap-12",
+    "layout_mode": "Mode A: The Tetris Grid (Asymmetrical, High Tension)",
+    "border_radius": "rounded-none",
+    "notes": "Generous spacing. Break symmetry. Use 'p-8' on bordered containers."
+  },
+  "surfaces_and_effects": {
+    "navigation": "Crystal Glass: backdrop-blur-2xl bg-[#0A0A0A]/60 border-b border-white/10",
+    "cards": "Neumorphic/Tactile variant in dark mode: bg-[#121212] border border-white/5 hover:border-white/20 transition-all",
+    "buttons": "Invert Hover: bg-white text-black hover:bg-transparent hover:text-white border border-white transition-colors duration-300",
+    "hover_glow": "shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+  },
+  "animations": {
+    "engine": "framer-motion",
+    "scrolling": "lenis (smooth scroll)",
+    "loading_screen": {
+      "style": "Minimalist black screen, white Velstrax logo reveal, subtle fade out",
+      "duration": "2 seconds"
+    },
+    "page_transitions": "Fade and slight blur on enter",
+    "scroll_reveal": "opacity-0 translate-y-8 to opacity-100 translate-y-0 with stagger",
+    "micro_interactions": "Button morphing (scale down 0.98 on tap), image grayscale to color or slight scale on hover"
+  },
+  "components": {
+    "hero": {
+      "layout": "Full height, centered content, ultra-minimal",
+      "visuals": "Abstract 3D glass waves background with overlay",
+      "overlay": "bg-black/60 to ensure white text readability",
+      "requirements": "Parallax effect on scroll"
+    },
+    "services": {
+      "layout": "Bento Grid (Asymmetrical, tall and square blocks)",
+      "interactions": "Hover to reveal detail or slight border glow"
+    },
+    "how_it_works": {
+      "layout": "Vertical timeline or horizontal sliding cards with bold numbering",
+      "typography": "Massive step numbers (text-8xl text-white/10 absolute behind text)"
+    },
+    "portfolio": {
+      "layout": "Masonry or staggered grid",
+      "cards": "Image heavy, black/white transformation focus, subtle hover zoom"
+    },
+    "contact": {
+      "layout": "Split screen (Left: Big typography, Right: Form)",
+      "form": "Shadcn based, purely minimalist inputs (border-b only, no full boxes), bg-transparent"
+    },
+    "admin_dashboard": {
+      "layout": "Sidebar navigation + tight content grid",
+      "style": "Pure utility, Shadcn components, dense data view, #0A0A0A background"
+    },
+    "navigation": {
+      "type": "Sticky top, blur background",
+      "elements": "Logo, Links, Language Toggle (GR/EN), CTA"
+    }
+  },
+  "image_urls": [
+    {
+      "category": "hero_background",
+      "url": "https://static.prod-images.emergentagent.com/jobs/b457d1cd-e986-407e-8de4-689a0cc924dd/images/1cc4540df140c290fb41fef25dff97a010cce576ecfe9c144bf5cb6a3a0fb51d.png",
+      "description": "Ultra premium abstract 3D glass waves on black background"
+    },
+    {
+      "category": "portfolio_mockup",
+      "url": "https://static.prod-images.emergentagent.com/jobs/b457d1cd-e986-407e-8de4-689a0cc924dd/images/9feae1b26277a0aafdca459dd714f37c048835e3ef6fae5dff37d3262fb82679.png",
+      "description": "High end minimalist laptop mockup on a dark desk"
+    },
+    {
+      "category": "services_abstract",
+      "url": "https://static.prod-images.emergentagent.com/jobs/b457d1cd-e986-407e-8de4-689a0cc924dd/images/155986554433dd39504c6a58885327703738a992e63b4bac2faece5ac72cee46.png",
+      "description": "Abstract black and white dark mode geometric sphere"
+    },
+    {
+      "category": "architecture_inspiration",
+      "url": "https://images.unsplash.com/photo-1527576539890-dfa815648363?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA4Mzl8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwYXJjaGl0ZWN0dXJlJTIwYmxhY2slMjBhbmQlMjB3aGl0ZXxlbnwwfHx8fDE3Nzg5MjM4NTF8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Grayscale photo of low angle view of building"
+    }
+  ],
+  "testing": {
+    "data_testid_rules": "All interactive and key informational elements MUST include a 'data-testid' attribute (e.g. data-testid='contact-submit-button'). Use kebab-case and role-based naming."
+  },
+  "instructions_to_main_agent": [
+    "Use .js files for React components, do not use .tsx",
+    "Enforce 'use client' on components heavily utilizing Framer Motion or Hooks.",
+    "Implement Lenis for smooth scroll on the main layout.",
+    "Do NOT use placeholder text or placeholder image URLs. Rely strictly on the media URLs provided.",
+    "Ensure all inputs and buttons have high contrast focus states.",
+    "Implement a language toggle component managing Greek/English state globally.",
+    "Install and configure 'framer-motion' and 'lucide-react'."
+  ]
+}
